@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.3.10"
+ktlint-gradle = "12.3.0"
+ktlint = "1.5.0"
+swdevsm-publishing-conventions = "0.0.1"
+
+[libraries]
+# Maven artifact of the ktlint-gradle plugin — the precompiled script plugin
+# needs this on its classpath so it can `apply` the plugin by id.
+ktlint-gradle-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-gradle" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
+swdevsm-publishing-conventions = { id = "ru.swdevsm.publishing-conventions", version.ref = "swdevsm-publishing-conventions" }
